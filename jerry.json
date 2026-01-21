@@ -1,0 +1,9 @@
+{
+  "name": "digital-literacy",
+  "version": "1.0.0",
+  "description": "Digital Literacy Hub Project",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Renu",
+  "license": "ISC"
+}
