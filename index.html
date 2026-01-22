@@ -6,14 +6,24 @@
     <title>Literacy Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="tom.css">
+    <link rel="stylesheet" href="jack.css">
 </head>
 <body>
-    <div id="loginPage" class="login-container">
-    <div class="login-box">
+   
+   
+   <div id="loginPage" class="login-container">
+        <div class="login-box">
             <div class="login-icon">📱</div>
             <h1>Literacy Hub</h1>
             <p>Sign in to track your learning progress</p>
-            <form id="loginForm" onsubmit="handleLogin(event)">
+            
+            
+            <div class="tabs">
+                <button id="signInTab" class="tab active" onclick="switchTab('signIn')">Sign In</button>
+                <button id="signUpTab" class="tab" onclick="switchTab('signUp')">Sign Up</button>
+            </div>
+            
+            <form id="loginForm" class="form active" onsubmit="handleLogin(event)">
                 <div class="input-group">
                     <label for="username">Username</label>
                     <input type="text" id="username" placeholder="Enter your name" required>
@@ -22,16 +32,38 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Enter your password" required>
                 </div>
-                <div crlass="flex justify-between items-center mb-4">
+                <div class="flex justify-between items-center mb-4">
                     <label>
                         <input type="checkbox" id="rememberMe"> Remember me
                     </label>
                 </div>
                 <button type="submit" class="login-btn">Sign In</button>
+                <p class="switch-link">New user? <a href="#" onclick="switchTab('signUp')">Sign up</a></p>
+            </form>
+            
+            
+            <form id="signupForm" class="form" onsubmit="handleSignup(event)">
+                <div class="input-group">
+                    <label for="signupUsername">Username</label>
+                    <input type="text" id="signupUsername" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" placeholder="Enter your password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="login-btn">Sign Up</button>
+                <p class="switch-link">Already have an account? <a href="#" onclick="switchTab('signIn')">Sign in</a></p>
             </form>
         </div>
     </div>
-
     <div id="mainContent" style="display: none;">
         <header class="relative h-[70vh] flex items-center justify-center text-center text-white">
             <div class="absolute inset-0 bg-cover bg-center"></div>
@@ -599,5 +631,6 @@
             });
         });
     </script>
+    <script src="jack.js"></script>
 </body>
 </html>
