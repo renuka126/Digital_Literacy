@@ -22,7 +22,7 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Enter your password" required>
                 </div>
-                <div class="flex justify-between items-center mb-4">
+                <div crlass="flex justify-between items-center mb-4">
                     <label>
                         <input type="checkbox" id="rememberMe"> Remember me
                     </label>
@@ -56,7 +56,7 @@
         </header>
 
         <main class="container mx-auto px-4 py-10">
-            <!-- Home Section -->
+          
              
             <section id="home" class="section active">
                     <h2 class="text-3xl font-bold text-center">Welcome to Literacy hub</h2>
@@ -74,7 +74,7 @@
                         <style >
                             .card {
                                 background-color: white;
-                                opacity: 0.8; /* 0 = fully transparent, 1 = fully opaque */
+                                opacity: 0.8;
                             }
                             .card img {
                                 border-radius: 15px;
@@ -101,7 +101,7 @@
                                     <style >
                                         .card {
                                             background-color: white;
-                                            opacity: 0.8; /* 0 = fully transparent, 1 = fully opaque */
+                                            opacity: 0.8;
                                         }
                                         .img {
                                             border-radius: 15px;
@@ -124,7 +124,7 @@
                         <style >
                             .card {
                                 background-color: white;
-                                opacity: 0.8; /* 0 = fully transparent, 1 = fully opaque */
+                                opacity: 0.8; 
                             }
                         </style>  
                             <div class=" card flex bg-white p-6 rounded-2x1 shadow-lg animate-cards" >
@@ -143,14 +143,14 @@
                     </aside>    
             </section>
 
-            <!-- Seniors Section -->
+            
             <section id="seniors" class="section">
                     <h2 class="text-2xl font-bold">Digital Basics for Seniors</h2>
                     <p class="text-lg mb-6">Simple apps to stay connected and entertained.</p>
                     <style>
                         .card {
                         max-width: 250;
-                        flex: 1 ;/* You can specify width here if needed, e.g.: width: 100%; */
+                        flex: 1 ;
                         }
                         image {
                         max-width: 100%;
@@ -223,7 +223,7 @@
                         </div>
                     </div>
             </section>
-            <!-- Other sections continue with similar structure... -->
+            
             <section id="farmers" class="section">
                     <h2 class="text-2xl font-bold">Tools for Farmers</h2>
                     <p class="text-lg mb-6">Optimize your farm with technology.</p>
@@ -588,7 +588,7 @@
             }
         }
 
-        // Scroll animations
+        
         window.addEventListener('scroll', function() {
             const cards = document.querySelectorAll('.card');
             cards.forEach(card => {
